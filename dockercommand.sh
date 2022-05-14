@@ -1,0 +1,1 @@
+docker run -it --name data-copier --rm -v C:\Users\sutharshan.v\Research\data\retail_db_json:/retail_db_json -e BASE_DIR=/retail_db_json -e DB_HOST=96773b5ee0fc  -e  DB_PORT=5432 -e DB_NAME=retail_db -e DB_USER=retail_user -e DB_PASS=itversity data-copier bash
