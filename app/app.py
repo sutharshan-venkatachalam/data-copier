@@ -108,6 +108,7 @@ def process_table(BASE_DIR, conn, table_name):
 
 
 def main():
+    print('Enter in app file')
     configs = dict(os.environ.items())
     conn = f'postgresql://{configs["DB_USER"]}:{configs["DB_PASS"]}@{configs["DB_HOST"]}:{configs["DB_PORT"]}/{configs["DB_NAME"]}'
     BASE_DIR = os.environ.get('BASE_DIR')
@@ -115,7 +116,7 @@ def main():
     print("table_names:",table_names)
     for table in table_names:
         process_table(BASE_DIR, conn, table)
-    print("all df entered successfully")
+    print("all df entered successfully ended")
 
 
 if __name__ == '__main__':
